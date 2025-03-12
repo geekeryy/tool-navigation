@@ -298,3 +298,5 @@ function resetForm() {
     document.getElementById('submit-btn').textContent = '添加工具';
     document.getElementById('cancel-btn').style.display = 'none';
 }
+
+
