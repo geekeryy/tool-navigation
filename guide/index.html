@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具导航网站</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8d5l8fzk5b87iudi.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="工具导航" class="logo">
+            <h1>实用工具导航</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="manage.html">管理工具</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tools-container">
+            <h2>常用工具</h2>
+            <div class="tools-grid" id="tools-list">
+                <!-- 工具列表将通过JavaScript动态生成 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 工具导航网站 - 收集实用在线工具</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

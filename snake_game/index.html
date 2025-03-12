@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>贪吃蛇游戏</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="game-container">
+      <h1 class="game-title">贪吃蛇游戏</h1>
+      <div class="game-layout">
+        <div class="game-main">
+          <div class="auth-container">
+            <div class="auth-status" id="authStatus"></div>
+          </div>
+          <div class="game-area">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div class="countdown"></div>
+            <div class="game-info">
+              <div class="score">当前分数: <span id="scoreValue">0</span></div>
+              <div class="speed-control">
+                <label for="speedRange">游戏速度:</label>
+                <input type="range" id="speedRange" min="50" max="200" value="100" step="10">
+                <span id="speedValue">100</span>
+              </div>
+              <button id="startButton">开始游戏</button>
+            </div>
+          </div>
+        </div>
+        <div class="leaderboard">
+          <h2>排行榜</h2>
+          <div class="leaderboard-list" id="leaderboardList">
+            <!-- 排行榜内容将通过 JavaScript 动态生成 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理工具 - 工具导航网站</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8d5l8fzk5b87iudi.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="工具导航" class="logo">
+            <h1>实用工具导航</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="manage.html" class="active">管理工具</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tool-form">
+            <h2>添加/编辑工具</h2>
+            <form id="tool-form">
+                <input type="hidden" id="edit-id">
+                <div class="form-group">
+                    <label for="tool-name">工具名称</label>
+                    <input type="text" id="tool-name" required placeholder="例如：IP查询">
+                </div>
+                <div class="form-group">
+                    <label for="tool-url">工具网址</label>
+                    <input type="url" id="tool-url" required placeholder="例如：https://www.ip138.com">
+                </div>
+                <div class="form-group">
+                    <label for="icon-type">图标类型</label>
+                    <select id="icon-type" class="form-control">
+                        <option value="fontawesome">Font Awesome图标</option>
+                        <option value="svg">SVG图标</option>
+                    </select>
+                    <small class="form-text">
+                        <a href="https://fontawesome.com/v4/icons" target="_blank">Font Awesome图标参考</a> | 
+                        <a href="https://www.iconfont.cn" target="_blank">阿里巴巴矢量图标库</a>
+                    </small>
+                </div>
+                <div class="form-group" id="fontawesome-input">
+                    <label for="tool-icon">图标代码 (Font Awesome类名)</label>
+                    <input type="text" id="tool-icon" placeholder="例如：fas fa-search" value="fas fa-link">
+                </div>
+                <div class="form-group" id="svg-input" style="display:none;">
+                    <label for="tool-svg">SVG图标代码</label>
+                    <textarea id="tool-svg" placeholder="<svg>...</svg>" rows="3"></textarea>
+                </div>
+                </div>
+                <button type="submit" class="btn" id="submit-btn">添加工具</button>
+                <button type="button" class="btn" id="cancel-btn" style="display:none;">取消编辑</button>
+            </form>
+        </section>
+
+        <section class="tools-container">
+            <h2>管理工具列表</h2>
+            <table class="tools-table">
+                <thead>
+                    <tr>
+                        <th>图标</th>
+                        <th>名称</th>
+                        <th>网址</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="tools-table-body">
+                    <!-- 工具列表将通过JavaScript动态生成 -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 工具导航网站 - 收集实用在线工具</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

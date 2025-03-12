@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "geekeryy"
+  },
+  "targets": {
+    "geekeryy": {
+      "hosting": {
+        "snake-game-ai": [
+          "p1"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
