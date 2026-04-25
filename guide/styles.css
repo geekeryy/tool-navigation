@@ -205,6 +205,193 @@ main {
     text-decoration: underline;
 }
 
+.tool-description {
+    margin-bottom: 1.5rem;
+    color: #7f8c8d;
+}
+
+.status-message {
+    min-height: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.status-info {
+    color: #3498db;
+}
+
+.status-success {
+    color: #27ae60;
+}
+
+.status-error {
+    color: #e74c3c;
+}
+
+.qr-workspace {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.qr-upload-card {
+    background-color: #f8f9fa;
+    border: 1px dashed #3498db;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.qr-upload-card label {
+    font-size: 1.05rem;
+    color: #2c3e50;
+}
+
+.qr-upload-card input[type="file"] {
+    background-color: white;
+    cursor: pointer;
+}
+
+.qr-access-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background:
+        radial-gradient(circle at top left, rgba(52, 152, 219, 0.28), transparent 34%),
+        linear-gradient(135deg, rgba(44, 62, 80, 0.72), rgba(52, 73, 94, 0.62));
+    backdrop-filter: blur(6px);
+}
+
+.qr-access-modal[hidden] {
+    display: none;
+}
+
+.qr-access-dialog {
+    width: min(100%, 390px);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 16px;
+    box-shadow: 0 18px 50px rgba(20, 45, 70, 0.26);
+    padding: 1rem;
+}
+
+.qr-access-dialog::before {
+    content: "暗号";
+    display: block;
+    width: max-content;
+    margin: 0 auto 0.6rem;
+    padding: 0.18rem 0.65rem;
+    border-radius: 999px;
+    background-color: rgba(52, 152, 219, 0.12);
+    color: #3498db;
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+.qr-access-sentence {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    margin-bottom: 0.65rem;
+    padding: 0.48rem 0.65rem;
+    background-color: white;
+    border: 1px solid #e8eef5;
+    border-radius: 12px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.qr-access-sentence input {
+    width: 5.5rem;
+    padding: 0.3rem 0.35rem;
+    border: 0;
+    border-bottom: 2px solid #3498db;
+    outline: none;
+    background-color: #f4f9ff;
+    border-radius: 8px 8px 0 0;
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.qr-access-sentence input:focus {
+    background-color: #eaf5ff;
+    border-color: #2980b9;
+    box-shadow: 0 8px 18px rgba(52, 152, 219, 0.16);
+}
+
+.qr-access-dialog .btn {
+    width: 100%;
+    padding: 0.62rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 22px rgba(52, 152, 219, 0.24);
+    font-weight: bold;
+}
+
+.qr-panel {
+    background-color: #f8f9fa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.qr-panel h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.qr-output-panel {
+    margin-top: 1.5rem;
+}
+
+.qr-output {
+    display: flex;
+    min-height: 280px;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-output img,
+.qr-output canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.qr-expire-time {
+    margin-top: 1rem;
+    color: #27ae60;
+    font-size: 1.15rem;
+    font-weight: bold;
+    white-space: pre-line;
+}
+
+.qr-refresh-btn {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.qr-refresh-btn:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.qr-result-section {
+    margin-top: 2rem;
+}
+
 .btn {
     padding: 0.8rem 1.5rem;
     background-color: #3498db;
@@ -281,6 +468,31 @@ footer {
     .tool-form, .tools-container {
         padding: 1rem;
     }
+
+    .tool-description {
+        font-size: 0.95rem;
+    }
+
+    .qr-upload-card {
+        padding: 1rem;
+    }
+
+    .qr-upload-card input[type="file"] {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .qr-panel {
+        padding: 1rem 0.75rem;
+    }
+
+    .qr-output {
+        min-height: 260px;
+    }
+
+    .qr-expire-time {
+        font-size: 1.05rem;
+    }
     
     .btn {
         width: 100%;
@@ -289,5 +501,153 @@ footer {
     
     .action-buttons {
         flex-direction: column;
+    }
+}
+
+/* 二维码刷新页紧凑布局 */
+body.qr-time-page header {
+    padding: 0.8rem 1.5rem;
+}
+
+body.qr-time-page .logo-container {
+    margin-bottom: 0;
+}
+
+body.qr-time-page .logo {
+    width: 34px;
+    height: 34px;
+}
+
+body.qr-time-page header h1 {
+    margin-bottom: 0;
+    font-size: 1.45rem;
+}
+
+body.qr-time-page main {
+    max-width: 760px;
+    margin: 1rem auto;
+}
+
+body.qr-time-page .tool-form {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+body.qr-time-page .form-group {
+    margin-bottom: 0.65rem;
+}
+
+body.qr-time-page .qr-upload-card {
+    padding: 0.7rem;
+}
+
+body.qr-time-page .qr-upload-card label {
+    margin-bottom: 0.35rem;
+    font-size: 1rem;
+}
+
+body.qr-time-page .qr-upload-card input[type="file"] {
+    padding: 0.55rem;
+}
+
+body.qr-time-page .status-message {
+    position: fixed;
+    top: calc(env(safe-area-inset-top, 0px) + 1rem);
+    left: 50%;
+    z-index: 1100;
+    width: max-content;
+    max-width: calc(100vw - 2rem);
+    min-height: 0;
+    margin: 0;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    background-color: rgba(44, 62, 80, 0.94);
+    color: white;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+    font-size: 0.95rem;
+    line-height: 1.35;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -8px);
+    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+}
+
+body.qr-time-page .status-message.status-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+body.qr-time-page .status-message.status-info {
+    background-color: rgba(52, 152, 219, 0.96);
+    color: white;
+}
+
+body.qr-time-page .status-message.status-success {
+    background-color: rgba(39, 174, 96, 0.96);
+    color: white;
+}
+
+body.qr-time-page .status-message.status-error {
+    background-color: rgba(231, 76, 60, 0.96);
+    color: white;
+}
+
+body.qr-time-page .qr-output-panel {
+    margin-top: 0.65rem;
+    padding: 0.75rem;
+}
+
+body.qr-time-page .qr-panel h3 {
+    margin-bottom: 0.45rem;
+    font-size: 1rem;
+}
+
+body.qr-time-page .qr-output {
+    min-height: 240px;
+}
+
+body.qr-time-page .qr-expire-time {
+    margin-top: 0.45rem;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+body.qr-time-page .qr-refresh-btn {
+    margin-top: 0.55rem;
+    padding: 0.62rem 1rem;
+}
+
+body.qr-time-page footer {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+@media (max-width: 480px) {
+    body.qr-time-page header {
+        padding: 0.7rem 1rem;
+    }
+
+    body.qr-time-page .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    body.qr-time-page header h1 {
+        font-size: 1.25rem;
+    }
+
+    body.qr-time-page main {
+        margin: 0.75rem auto;
+        padding: 0 0.75rem;
+    }
+
+    body.qr-time-page .tool-form {
+        padding: 0.75rem;
+    }
+
+    body.qr-time-page footer {
+        padding: 0.75rem;
     }
 }
